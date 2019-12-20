@@ -1,0 +1,63 @@
+Landing site as an omage to the genius of Hideo Kojima
+
+------
+
+Idealy
+
+-----
+
+Landing site separated in divs
+
+First -> Description de la Hideo Kojima and his initial studio, his quarell with them and his current studio
+
+Second-> Games
+	
+	1) Penguin Adventure ---
+
+	2) Metal Gear;
+
+	3) Snatcher;
+
+	4) Metal Gear 2: Solid Snake;
+
+	5) Policenauts;
+
+	6) Metal Gear Solid;
+
+	7) Metal Gear Solid 2: Sons of Liberty;
+
+	8) Metal Gear Solid 3: Snake Eater;
+
+	9) Metal Gear Solid 4: Guns of the Patriots;
+
+	10) Metal Gear Solid: Peace Walker;
+
+	11) Metal Gear Solid 5: Ground Zeroes;
+
+	12) P.T.; ---
+
+	13) Silent Hills;   ---
+
+	14) Metal Gear Solid 5: The Phantom Pain;
+
+	15) Death Stranding.
+
+Third -> Summary
+
+Footer -> Made by Maneed Dumitru dedicated to the GENIUS Hideo Kojima
+
+-----
+
+Efects
+
+-----
+
+1) On scrollin over the game -> Starts 2 events:
+	
+	a) Fade of the backgorund into full black and the Name of the game pops up
+
+	b) Starts a fraction of the sound track
+
+2) Audio of the game somewhere
+
+3) If hovering more than 50px of the next game tha page force scrolls to the game div with 1) Effect 
