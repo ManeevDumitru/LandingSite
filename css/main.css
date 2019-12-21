@@ -2,26 +2,31 @@
     padding: 0;
     margin: 0;
 }
+
 *:focus {
     outline: none;
 }
+
 body {
     font-family: 'Odibee Sans', cursive;
     letter-spacing: 1px;
     font-size: 26px;
-    background: #282828;
+    width: 100%;
 }
+
+ul {
+    list-style: none;
+}
+
 a {
-    color: red;
+    color: black;
     text-decoration: none;
 }
-section {
-    max-width: 1920px;
-    margin: auto;
-}
+
 div {
     position: relative;
 }
+
 audio {
     position: absolute;
     top: 0;
@@ -29,37 +34,69 @@ audio {
     z-index: 5;
 }
 
-/* Metal Gear Solid 5: The Phantom Pain */
-
-.sectionCP77 {
-    background: url(../img/bg/CP77KV.png);
-    background-position: center;
-    background-size: cover;
+header {
+    background: #efe600;
+    height: 955px;
     position: relative;
-    width: 100%;
-    height: 954px;
-    margin: auto;
 }
-.sectionCP77::after {
-    content:" ";
-    background: url(../img/utility/bar1.png);
+
+header::after {
+    content: " ";
+    background: url(../img/utility/bar1i.png);
     height: 50px;
     width: 100%;
     position: absolute;
     bottom: 0;
     left: 0;
 }
-.fieldCP77_Left {
+
+.headerAwards {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 1;
+    padding: 25px;
 }
-.sectionCP77Container {
+
+.headerRightField {
     position: absolute;
-    top: 150px;
-    left: /*1000px*/ 52.6%;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    padding: 35px;
+    display: flex;
 }
-.sectionCP77VideoContainer::after {
+
+.headerRightFieldLinks {
+    /*line-height: 100px;*/
+    padding: 35px;
+    font-size: 26px;
+}
+
+.headerRightFieldLinks a {
+    padding: 0 5px 0 5px;
+}
+
+.headerCP77Wrapper {
+    background: black;
+    margin: auto;
+    background: url(../img/bg/CP77KV.png);
+    background-position: center;
+    background-size: cover;
+    height: 955px;
+    max-width: 1920px;
+    position: relative;
+    z-index: 0;
+}
+
+.headerCP77VideoContainer {
+    position: absolute;
+    top: 152px;
+    left: /*1000px*/
+    52.6%;
+}
+
+.headerCP77VideoContainer::after {
     content: " ";
     background: url(../img/utility/Outline.png);
     position: absolute;
@@ -67,34 +104,86 @@ audio {
     left: 0;
     height: 300px;
     width: 520px;
-    z-index: 5;
+    z-index: 4;
 }
-.spaceBetween {
-    background: #000000;
-    height: 200px;
-    width: 100%;
+
+.headerUnderVideo {
+    position: absolute;
+    bottom: 250px;
+    left: 55%;
+    z-index: 1;
 }
-.anotherSection {
-    background: #b3ffd9;
-    width: 100%;
-    height: 954px;
+
+.headerUnderVideoDate {
+    font-size: 36px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
 }
-.anotherSection::before {
-    content:" ";
-    background: url(../img/utility/bar1inv.png);
-    height: 50px;
-    width: 100%;
+
+#releaseDate {
+    color: #fcf300;
+    background: black;
+    padding: 0 10px;
+}
+
+.headerUnderVideoButton {
+    background: #ff003c;
+    color: #fff;
+    width: 400px;
+    height: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 100px;
+    font-size: 32px;
+}
+.headerUnderVideoButton::after {
+    content: " ";
+    background: url(../img/utility/AngleButton.png);
+    height: 100px;
+    width: 400px;
     position: absolute;
     top: 0;
     left: 0;
 }
-.fieldCP77_Right {
-    position: absolute;
-    right: 0;
-    top: 0;
+.headerUnderVideoPlatforms ul {
+    padding-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 600;
 }
-/*button {
+.headerUnderVideoPlatforms ul li {
+    padding: 0 10px;
+}
+.active {
+    display: none;
+}
+
+#beepingItem {
+    background: #00ffff;
+    display: block;
+    width: 50px;
+    height: 7px;
+    position: absolute;
+    bottom: 11px;
+    left: 50px;
+    z-index: 5;
+}
+
+#beepingItem::after {
+    content: ' ';
+    background: url(../img/utility/Angle.png);
+    height: 10px;
+    width: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.spaceBetweenFirst {
     background: black;
     height: 250px;
-}*/
-
+}
