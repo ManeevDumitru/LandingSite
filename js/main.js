@@ -2,7 +2,7 @@ $(document).ready(function () {
     audioSound();
     ticking();
     timeUntilRelease();
-    whatev();
+    moveLabel();
 });
 
 function audioSound() {
@@ -33,16 +33,14 @@ function timeUntilRelease() {
     document.getElementById('releaseDate').innerHTML = Result;
 }
 
-function whatev() {
+function moveLabel() {
     let input = document.getElementById('inputEmail');
-    let every = document.getElementById('inputEmail');
     let element = document.getElementById('move');
-    input.addEventListener('mouseover',moveLabel);
-    every.addEventListener('mouseout',backLabel);
-    function moveLabel() {
+    let x = input.value.length;
+    if (x > 0)  {
         element.classList.remove('position');
     }
-    function backLabel() {
+    if  (x === 0) {
         element.classList.add('position');
-    }
+    } 
 }
