@@ -1,7 +1,8 @@
 $(document).ready(function () {
     audioSound();
     ticking();
-    testing();
+    timeUntilRelease();
+    whatev();
 });
 
 function audioSound() {
@@ -23,11 +24,25 @@ function ticking() {
     intervalBegin;
     intervalEnd;
 }
-function testing() {
+function timeUntilRelease() {
     let dateCurrent = new Date();
     let dateRelease = new Date("04/16/2020");
     let Difference = dateRelease.getTime() - dateCurrent.getTime();
     let Result = Math.floor(Difference / (1000 * 3600 * 24));
     console.log(Result);
     document.getElementById('releaseDate').innerHTML = Result;
+}
+
+function whatev() {
+    let input = document.getElementById('inputEmail');
+    let every = document.getElementById('inputEmail');
+    let element = document.getElementById('move');
+    input.addEventListener('mouseover',moveLabel);
+    every.addEventListener('mouseout',backLabel);
+    function moveLabel() {
+        element.classList.remove('position');
+    }
+    function backLabel() {
+        element.classList.add('position');
+    }
 }

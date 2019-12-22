@@ -317,7 +317,54 @@ header::after {
     text-transform: uppercase;
 }
 
-.nextSection {
+.sectionSpam::before {
+    content: " ";
+    background: url(../img/utility/bar6.png);
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.sectionSpam {
     background: #efe600;
     height: 600px;
+    position: relative;
+    padding-top: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.sectionSpam div:first-child {
+    flex-basis: 23%;
+}
+.sectionSpam div:nth-child(2) {
+    flex-basis: 40% ;
+}
+.sectionSpam div:last-child {
+    flex-basis: 23%;
+}
+
+.sectionSpam input {
+    background: #efe600;
+    border: none;
+    box-shadow: 0 2px 0 #000;
+    font-size: 24px;
+    width: 90%;
+    padding: 5px 15px;
+    position: absolute;
+    top: 35px;
+    left: 0;
+}
+.moveable {
+    transition: .3s;
+}
+.position {
+    transform: translate(15px,35px) !important;
+    color: rgb(119, 119, 119);
+    position: absolute;
+    z-index: 2;
+    transition: .3s;
 }
