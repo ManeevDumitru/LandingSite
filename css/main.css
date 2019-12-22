@@ -350,24 +350,15 @@ header::after {
 
 .sectionSpam {
     padding-top: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr 3fr 1fr;
     max-width: 1400px;
     margin: auto;
 }
 
-.sectionSpam div:first-child {
-    flex-basis: 23%;
-}
-
-.sectionSpam div:nth-child(2) {
-    flex-basis: 40%;
-    padding: 0;
-}
-
-.sectionSpam div:last-child {
-    flex-basis: 23%;
+.fieldLeftContainer {
+    padding-top: 50px;
 }
 
 .inputBox {
@@ -389,15 +380,17 @@ header::after {
 }
 
 .moveable {
-    transition: .3s;
+    transition: .5s;
+    font-weight: 200;
 }
 
 .position {
+    transition: .5s;
     transform: translate(55px, 35px) scale(1.5) !important;
     color: rgb(119, 119, 119);
     position: absolute;
     z-index: 1;
-    transition: .5s;
+    
 }
 
 .checkboxBox {
@@ -409,6 +402,10 @@ input#checkbox {
     align-self: baseline;
     background: none;
     border: none;
+}
+
+.fieldRightBox {
+    padding-top: 50px;
 }
 
 button#buttonSubmit {
@@ -434,10 +431,11 @@ button#buttonSubmit::after {
 }
 
 .checkboxBox p {
-    font-size: 18px;
+    font-size: 16px;
     font-family: "Arial", monospace;
     letter-spacing: .1px;
     font-weight: 200;
+    padding-right: 30px;
 }
 
 .checkboxBox a {
