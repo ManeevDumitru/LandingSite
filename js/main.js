@@ -3,6 +3,7 @@ $(document).ready(function () {
     ticking();
     timeUntilRelease();
     moveLabel();
+    verifyCompleing();
 });
 
 function audioSound() {
@@ -43,4 +44,10 @@ function moveLabel() {
     if  (x === 0) {
         element.classList.add('position');
     } 
+}
+
+function verifyCompleing() {
+    let input = document.getElementById('inputEmail');
+    let checkbox = document.getElementById('inputCheckbox');
+    console.log(input + ' ' + checkbox);
 }
