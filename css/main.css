@@ -12,6 +12,7 @@ body {
     letter-spacing: 1px;
     font-size: 26px;
     width: 100%;
+    background: black;
 }
 
 ul {
@@ -79,12 +80,12 @@ header::after {
 
 .headerCP77Wrapper {
     background: black;
-    margin: auto;
     background: url(../img/bg/CP77KV.png);
     background-position: center;
     background-size: cover;
     height: 955px;
     max-width: 1920px;
+    margin: auto;
     position: relative;
     z-index: 0;
 }
@@ -138,6 +139,7 @@ header::after {
     line-height: 100px;
     font-size: 32px;
 }
+
 .headerUnderVideoButton::after {
     content: " ";
     background: url(../img/utility/AngleButton.png);
@@ -147,6 +149,7 @@ header::after {
     top: 0;
     left: 0;
 }
+
 .headerUnderVideoPlatforms ul {
     padding-top: 25px;
     display: flex;
@@ -155,9 +158,11 @@ header::after {
     font-size: 22px;
     font-weight: 600;
 }
+
 .headerUnderVideoPlatforms ul li {
     padding: 0 10px;
 }
+
 .active {
     display: none;
 }
@@ -186,4 +191,133 @@ header::after {
 .spaceBetweenFirst {
     background: black;
     height: 250px;
+}
+
+.introduction {
+    background: url(../img/bg/CP77Intr.png);
+    background-position: center;
+    background-size: cover;
+    height: 750px;
+    max-width: 1920px;
+    margin: auto;
+    position: relative;
+}
+
+.introduction::before {
+    content: " ";
+    background: url(../img/utility/bar2inv.png);
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.introduction::after {
+    content: " ";
+    background: url(../img/utility/bar3.png);
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.boxForIntroduction {
+    background: #fcee0a;
+    height: 275px;
+    width: 500px;
+    position: absolute;
+    left: 80%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 55px;
+}
+
+.fieldForLabel {
+    text-transform: uppercase;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.fieldForLabel::after {
+    content: " ";
+    background: url(../img/utility/bar4.png);
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+}
+
+.fieldForText {
+    font-weight: 200;
+    font-size: 16px;
+    font-family: BlenderProBook, sans-serif;
+}
+
+.boxForIntroduction::after {
+    content: " ";
+    background: url(../img/utility/bar5.png);
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    bottom: -29px;
+    left: 0;
+}
+
+.features {
+    height: 400px;
+    background: #000;
+    max-width: 1920px;
+    margin: auto;
+}
+
+.featuresWrapper {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.featureBox {
+    width: 400px;
+    height: 250px;
+}
+
+.featureBoxWrapper p {
+    font-family: BlenderProBook, sans-serif;
+    color: #fff;
+    font-weight: 200;
+    font-size: 16px;
+    display: inline-block;
+    margin-top: 20px;
+    max-width: 400px;
+}
+
+.featureBoxWrapper:first-child .featureBox {
+    background: url(../img/bg/Moto.png);
+}
+
+.featureBoxWrapper:nth-child(2) .featureBox {
+    background: url(../img/bg/City.png);
+}
+
+.featureBoxWrapper:last-child .featureBox {
+    background: url(../img/bg/KeanuReeves.png);
+}
+
+.featureBoxText {
+    background: yellow;
+    width: 300px;
+    position: absolute;
+    bottom: 25px;
+    right: -50px;
+    padding: 15px;
+    text-transform: uppercase;
+}
+
+.nextSection {
+    background: #efe600;
+    height: 600px;
 }
