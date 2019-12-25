@@ -333,9 +333,8 @@ header::after {
 }
 
 .sectionSpamContainer {
-    background: #efe600;
+    background: #000;
     position: relative;
-    height: 300px;
 }
 
 .sectionSpamContainer::after {
@@ -344,17 +343,33 @@ header::after {
     width: 100%;
     height: 50px;
     position: absolute;
-    bottom: -1px;
+    bottom: -2px;
     left: 0;
 }
 
+.sectionSpamBox::before {
+    content: " ";
+    background: url(../img/utility/bar6.png);
+    width: 100%;
+    height: 49px;
+    position: absolute;
+    top: -1px;
+    left: 0;
+}
+
+.sectionSpamBox {
+    max-width: 2200px;
+    margin: auto;
+    background: #efe600;
+}
+
 .sectionSpam {
-    padding-top: 50px;
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 2fr 3fr 1fr;
     max-width: 1400px;
     margin: auto;
+    padding: 75px 0 100px 0; !important;
 }
 
 .fieldLeftContainer {
@@ -564,18 +579,16 @@ h2 {
 
 .sliderBox {
     height: 400px;
-    border: 1px solid red;
 }
 
 .sectionNewsContainer {
     max-width: 1400px;
     margin: auto;
-    border: 1px solid #908c06;
     color: #cdcdcd;
-    background: rgb(41, 41, 41);
     display: grid;
     grid-template-rows: 150px;
     grid-template-columns: 1fr;
+    padding: 0 0 75px 0;
 }
 
 .sectionNewsTitle {
@@ -673,6 +686,7 @@ h2 {
     padding: 0 30px 30px;
     color: #cdcdcd;
     font-weight: 100;
+    border: 1px solid #cdcdcd;
 }
 
 .snSecBox:hover {
@@ -712,18 +726,109 @@ h2 {
     display: block;
 }
 
+/* * */
 
-
-
-
-
-
-
-
-
-
-
-
-.nextSection {
-    height: 1000px;
+footer {
+    background: #efe600;
+    width: 100%;
+    position: relative;
 }
+
+footer::before {
+    content: " ";
+    background: url(../img/utility/bar6f.png);
+    width: 100%;
+    height: 49px;
+    position: absolute;
+    top: -1px;
+    left: 0;
+}
+
+.fContentTop {
+    display: grid;
+    grid-template-rows: 1fr 100px;
+    grid-template-columns: 1fr;
+    padding:  75px 0; 
+}
+
+.fContentTop #firstUl {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 3fr;
+    line-height: 32px;
+}
+
+.fContentTop ul li ul {
+    display: grid;
+    grid-template-columns: 2fr repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    
+}
+
+.fContentTop ul li ul li {
+    font-size: 32px;
+}
+
+.fContentTInfo {
+    font-size: 16px;
+    margin: auto;
+}
+
+.fContentB {
+    max-width: 1100px;
+    margin: auto;
+    height: 350px;
+    background: #000;
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+}
+.fContentB::before {
+    content: " ";
+    position: absolute;
+    height: 0;
+    width: 0;
+    left: 0;
+    top: 0;
+    border-color: #efe600 transparent;
+    border-style: solid;
+    border-width: 19px 19px 0 0;
+}
+
+.fContentB ul {
+    max-width: 500px;
+    padding: 25px 0 0 0;
+    margin: auto;
+    color: #efe600;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px
+}
+.fContentB a {
+    color: #fff;
+    line-height: 105px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    font-size: 16px;
+}
+
+.fContentB ul li a img {
+    transform: translate(0,35%);
+}
+
+.fContentBBox4Img {
+    max-width: 60%;
+    margin: auto;
+}
+
+
+
+
+
+
