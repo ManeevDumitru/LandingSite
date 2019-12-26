@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/nav.css">
     <link rel="shortcut icon" href="img/logo/favicon.ico">
@@ -123,47 +124,48 @@
         </div>
     </section>
     <form method="POST">
-    <section class="sectionSpamContainer">
-        <div class="sectionSpamBox">
-            <div class="sectionSpam">
-                <div class="fieldLeft">
-                    <div class="fieldLeftContainer">
-                        <h2>
-                            Be the first one!
-                        </h2>
-                        <p>
-                            Subscribe to get news about development of Cyberpunk 2077
-                        </p>
+        <section class="sectionSpamContainer">
+            <div class="sectionSpamBox">
+                <div class="sectionSpam">
+                    <div class="fieldLeft">
+                        <div class="fieldLeftContainer">
+                            <h2>
+                                Be the first one!
+                            </h2>
+                            <p>
+                                Subscribe to get news about development of Cyberpunk 2077
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="fieldMiddle">
-                    <div class="inputBox">
-                        <label id="move" class="moveable position">Introduce your e-mail</label>
-                        <input type="email" name="email" id="inputEmail" required onkeyup="moveLabel()"
-                            onkeypress="moveLabel()">
+                    <div class="fieldMiddle">
+                        <div class="inputBox">
+                            <label id="move" class="moveable position">Introduce your e-mail</label>
+                            <input type="email" name="email" id="inputEmail" required onkeyup="moveLabel()"
+                                onkeypress="moveLabel()">
+                        </div>
+                        <div class="checkboxBox">
+                            <input type="checkbox" name="inputCheckbox" id="inputCheckbox">
+                            <p>
+                                I want to get news, special offers and other information about CD PROJEKT and I confirm
+                                that
+                                I'm older than 16 years. <br> <br>
+                                <span>
+                                    CD PROJEKT is responsible for the safety of your data. To get aditional information
+                                    please read the <a href="https://regulations.cdprojektred.com/en/privacy_policy">
+                                        Privacy policy CD PROJEKT</a>
+                                </span>
+                            </p>
+                        </div>
                     </div>
-                    <div class="checkboxBox">
-                        <input type="checkbox" name="inputCheckbox" id="inputCheckbox">
-                        <p>
-                            I want to get news, special offers and other information about CD PROJEKT and I confirm that
-                            I'm older than 16 years. <br> <br>
-                            <span>
-                                CD PROJEKT is responsible for the safety of your data. To get aditional information
-                                please read the <a href="https://regulations.cdprojektred.com/en/privacy_policy">
-                                    Privacy policy CD PROJEKT</a>
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <div class="fieldRight">
-                    <div class="fieldRightBox">
-                        <button id="buttonSubmit" type="submit" disabled>Submit</button>
+                    <div class="fieldRight">
+                        <div class="fieldRightBox">
+                            <button id="buttonSubmit" type="submit" disabled>Submit</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-</form>
+        </section>
+    </form>
     <section class="sectionGalery">
         <div class="sectionGaleryContainer">
             <div class="sectionGaleryName">
@@ -172,7 +174,7 @@
             <div class="sectionGaleryCategory">
                 <div class="categoryList">
                     <div class="categoriesContainer">
-                        <button>
+                        <button id="R23">
                             <span>
                                 Screenshots
                             </span>
@@ -181,7 +183,7 @@
                             </span>
                             <i></i>
                         </button>
-                        <button>
+                        <button id="R24">
                             <span>
                                 Wallpaper
                             </span>
@@ -189,7 +191,7 @@
                                 R24
                             </span>
                         </button>
-                        <button>
+                        <button id="R25">
                             <span>
                                 Concepts
                             </span>
@@ -202,8 +204,56 @@
                 </div>
             </div>
             <div class="sectionGalerySlides">
-                <div class="sliderBox">
-                    Will do later
+                <div class="sliderBox1">
+                    <div class="sbMBox">
+
+                    </div>
+                    <div class="sbSBox">
+
+                    </div>
+                    <div class="sbSBox">
+
+                    </div>
+                    <div class="sbSBox">
+
+                    </div>
+                    <div class="sbSBox">
+
+                    </div>
+                </div>
+                <div class="sliderBox2 swiper-slide">
+                    <div class="sbMBox">
+
+                    </div>
+                    <div class="sbSBox">
+
+                    </div>
+                    <div class="sbSBox">
+
+                    </div>
+                    <div class="sbSBox">
+
+                    </div>
+                    <div class="sbSBox">
+
+                    </div>
+                </div>
+                <div class="sliderBox3 swiper-slide">
+                    <div class="sbMBox">
+
+                    </div>
+                    <div class="sbSBox">
+
+                    </div>
+                    <div class="sbSBox">
+
+                    </div>
+                    <div class="sbSBox">
+
+                    </div>
+                    <div class="sbSBox">
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -319,7 +369,7 @@
                     </li>
                 </ul>
                 <div class="fContentTInfo">
-                    CD Projekt<i class="far fa-registered"></i>, Cyberpunk<i class="far fa-registered"></i>, Cyberpunk 2077<i class="far fa-registered"></i> are registered trademarks of CD PROJEKT S. A. <i class="far fa-copyright"></i> 2018 CD PROJEKT S. A. All right reserved.
+                    CD PROJEKT®, Cyberpunk®, Cyberpunk 2077® are registered trademarks of CD PROJEKT S.A. © 2018 CD PROJEKT S.A. All rights reserved. All other copyrights and trademarks are the property of their respective owners.
                 </div>
             </div>
             <div class="fContentB">
@@ -345,7 +395,7 @@
     </footer>
 
 
-
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="http://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
