@@ -4,6 +4,7 @@ $(document).ready(function () {
     timeUntilRelease();
     moveLabel();
     verifyCompleing();
+    switchSlide();
 });
 
 function audioSound() {
@@ -46,8 +47,33 @@ function moveLabel() {
     } 
 }
 
-function verifyCompleing() {
+/*function verifyCompleing() {
     let input = document.getElementById('inputEmail');
     let checkbox = document.getElementById('inputCheckbox');
     console.log(input + ' ' + checkbox);
+}*/
+
+function switchSlide() {
+    let box1 = document.getElementById('sliderBox1');
+    let box2 = document.getElementById('sliderBox2');
+    let box3 = document.getElementById('sliderBox3');
+    let button1 = document.getElementById('r23');
+    let button2 = document.getElementById('r24');
+    let button3 = document.getElementById('r25');
+    button1.addEventListener("click", function() {
+        box1.style.display = "grid";
+        box2.style.display = "none";
+        box3.style.display = "none";
+    });
+    button2.addEventListener("click", function() {
+        box1.style.display = "none";
+        box2.style.display = "grid";
+        box3.style.display = "none";
+    });
+    button3.addEventListener("click", function() {
+        box1.style.display = "none";
+        box2.style.display = "none";
+        box3.style.display = "grid";
+    })
 }
+
