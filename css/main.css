@@ -35,6 +35,21 @@ audio {
     z-index: 5;
 }
 
+::-webkit-scrollbar{
+    width: 2px;
+}
+
+::-webkit-scrollbar-track{
+    background: none;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #efe600;
+}
+
+/* */
+
 header {
     background: #efe600;
     height: 955px;
@@ -575,7 +590,7 @@ h2 {
     grid-area: 2/1/2/-1;
 }
 
-.sliderBox1, .sliderBox2, .sliderBox3 {
+.sb1Container1, .sb1Container2, .sb1Container3, .sb2Container1, .sb2Container2, .sb2Container3, .sb3Container1 {
     height: 400px;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
@@ -583,66 +598,157 @@ h2 {
     grid-gap: 10px;
 }
 
+/* ------------------------ BOX 1 CONTAINER 1 ------------------------ */
+
 .sbMBox {
     grid-area: 1/1/3/1;
     background: url(../img/bg/CP77am.png);
 }
 
-.sliderBox1 .sbSBox:nth-child(2) {
+.sliderBox1 .sb1Container1 div:nth-child(2) {
     background: url(../img/bg/CP77bc.png);
 }
 
-.sliderBox1 .sbSBox:nth-child(3) {
+.sliderBox1 .sb1Container1 div:nth-child(3) {
     background: url(../img/bg/CP77cc.png);
 }
 
-.sliderBox1 .sbSBox:nth-child(4) {
+.sliderBox1 .sb1Container1 div:nth-child(4) {
     background: url(../img/bg/CP77dc.png);
 }
 
-.sliderBox1 .sbSBox:nth-child(5) {
+.sliderBox1 .sb1Container1 div:nth-child(5) {
     background: url(../img/bg/CP77ec.png);
 }
 
-.sliderBox2 .sbMBox {
+/* ------------------------ BOX 1 CONTAINER 2  ------------------------*/
+
+.sliderBox1 .sb1Container2 .sbMBox {
     background: url(../img/bg/CP77fm.png);
 }
 
-.sliderBox2 .sbSBox:nth-child(2) {
+.sliderBox1 .sb1Container2 div:nth-child(2) {
     background: url(../img/bg/CP77gc.png);
 }
 
-.sliderBox2 .sbSBox:nth-child(3) {
+.sliderBox1 .sb1Container2 div:nth-child(3) {
     background: url(../img/bg/CP77hc.png);
 }
 
-.sliderBox2 .sbSBox:nth-child(4) {
+.sliderBox1 .sb1Container2 div:nth-child(4) {
     background: url(../img/bg/CP77ic.png);
 }
 
-.sliderBox2 .sbSBox:nth-child(5) {
+.sliderBox1 .sb1Container2 div:nth-child(5) {
     background: url(../img/bg/CP77jc.png);
 }
 
-.sliderBox3 .sbMBox {
+/* ------------------------ BOX 1 CONTAINER 3 ------------------------ */
+
+.sliderBox1 .sb1Container3 .sbMBox {
     background: url(../img/bg/CP77km.png);
 }
 
-.sliderBox3 .sbSBox:nth-child(2) {
+.sliderBox1 .sb1Container3 div:nth-child(2) {
     background: url(../img/bg/CP77lc.png);
 }
 
-.sliderBox3 .sbSBox:nth-child(3) {
+.sliderBox1 .sb1Container3 div:nth-child(3) {
     background: url(../img/bg/CP77mc.png);
 }
 
-.sliderBox3 .sbSBox:nth-child(4) {
+.sliderBox1 .sb1Container3 div:nth-child(4) {
     background: url(../img/bg/CP77nc.png);
 }
 
-.sliderBox3 .sbSBox:nth-child(5) {
+.sliderBox1 .sb1Container3 div:nth-child(5) {
     background: url(../img/bg/CP77oc.png);
 }
+
+/* ------------------------ BOX 2 CONTAINER 1 ------------------- */
+
+.sliderBox2 .sb2Container1 .sbMBox {
+    background: url(../img/bg/CP77tm.png);
+}
+
+.sliderBox2 .sb2Container1 div:nth-child(2) {
+    background: url(../img/bg/CP77uc.png);
+}
+
+.sliderBox2 .sb2Container1 div:nth-child(3) {
+    background: url(../img/bg/CP77vc.png);
+}
+
+.sliderBox2 .sb2Container1 div:nth-child(4) {
+    background: url(../img/bg/CP77xc.png);
+}
+
+.sliderBox2 .sb2Container1 div:nth-child(5) {
+    background: url(../img/bg/CP77yc.png);
+}
+
+/* ------------------------ BOX 2 CONTAINER 2 ------------------- */
+
+.sliderBox2 .sb2Container2 .sbMBox {
+    background: url(../img/bg/CP77zm.png);
+}
+
+.sliderBox2 .sb2Container2 div:nth-child(2) {
+    background: url(../img/bg/CP77zac.png);
+}
+
+.sliderBox2 .sb2Container2 div:nth-child(3) {
+    background: url(../img/bg/CP77zbc.png);
+}
+
+.sliderBox2 .sb2Container2 div:nth-child(4) {
+    background: url(../img/bg/CP77zcc.png);
+}
+
+.sliderBox2 .sb2Container2 div:nth-child(5) {
+    background: url(../img/bg/CP77zdc.png);
+}
+
+/* ------------------------ BOX 2 CONTAINER 3 ------------------- */
+
+.sliderBox2 .sb2Container3 .sbMBox {
+    background: url(../img/bg/CP77zem.png);
+}
+
+.sliderBox2 .sb2Container3 div:nth-child(2) {
+    background: url(../img/bg/CP77zfc.png);
+}
+
+.sliderBox2 .sb2Container3 div:nth-child(3) {
+    background: url(../img/bg/CP77zgc.png);
+}
+
+.sliderBox2 .sb2Container3 div:nth-child(4) {
+    background: url(../img/bg/CP77zhc.png);
+}
+
+.sliderBox2 .sb2Container3 div:nth-child(5) {
+    background: url(../img/bg/CP77zic.png);
+}
+
+/* ------------------------ BOX 3 CONTAINER 1 ------------------------ */
+
+.sliderBox3 .sbMBox {
+    background: url(../img/bg/CP77pm.png);
+}
+
+.sliderBox3 div:nth-child(2) {
+    background: url(../img/bg/CP77qc.png);
+}
+
+.sliderBox3 div:nth-child(3) {
+    background: url(../img/bg/CP77rc.png);
+}
+
+.sliderBox3 div:nth-child(4) {
+    background: url(../img/bg/CP77sc.png);
+}
+
 
 .hidden {
     display: none;

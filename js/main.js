@@ -47,12 +47,6 @@ function moveLabel() {
     } 
 }
 
-/*function verifyCompleing() {
-    let input = document.getElementById('inputEmail');
-    let checkbox = document.getElementById('inputCheckbox');
-    console.log(input + ' ' + checkbox);
-}*/
-
 function switchSlide() {
     let box1 = document.getElementById('sliderBox1');
     let box2 = document.getElementById('sliderBox2');
