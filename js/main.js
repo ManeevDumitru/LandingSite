@@ -4,7 +4,6 @@ $(document).ready(function () {
     timeUntilRelease();
     moveLabel();
     verifyCompleing();
-    switchSlide();
 });
 
 function audioSound() {
@@ -39,35 +38,51 @@ function moveLabel() {
     let input = document.getElementById('inputEmail');
     let element = document.getElementById('move');
     let x = input.value.length;
-    if (x > 0)  {
+    if (x > 0) {
         element.classList.remove('position');
     }
-    if  (x === 0) {
+    else {
         element.classList.add('position');
-    } 
+    }
 }
 
 function switchSlide() {
-    let box1 = document.getElementById('sliderBox1');
-    let box2 = document.getElementById('sliderBox2');
-    let box3 = document.getElementById('sliderBox3');
+    let box1 = document.getElementById('sgsBox1');
+    let box2 = document.getElementById('sgsBox2');
+    let box3 = document.getElementById('sgsBox3');
     let button1 = document.getElementById('r23');
     let button2 = document.getElementById('r24');
     let button3 = document.getElementById('r25');
-    button1.addEventListener("click", function() {
-        box1.style.display = "grid";
+    box1.style.display = "block";
+        box2.style.display = "none";
+        box3.style.display = "none";
+    button1.addEventListener("click", function () {
+        box1.style.display = "block";
         box2.style.display = "none";
         box3.style.display = "none";
     });
-    button2.addEventListener("click", function() {
+    button2.addEventListener("click", function () {
         box1.style.display = "none";
-        box2.style.display = "grid";
+        box2.style.display = "block";
         box3.style.display = "none";
     });
-    button3.addEventListener("click", function() {
+    button3.addEventListener("click", function () {
         box1.style.display = "none";
         box2.style.display = "none";
-        box3.style.display = "grid";
+        box3.style.display = "block";
     })
 }
 
+function slider() {
+    let mySwiper = new Swiper('.swiper-container', {
+        direction: 'horizontal', // direction
+        loop: true, // infinite scrolling
+        speed: 200,
+        allowTouchMove: false,
+        effect: 'fade',
+        navigation: {  // nav buttons
+            nextEl: '.buttonNext',
+            prevEl: '.buttonPrev',
+        },
+    })
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html land="en">
 
 <head>
     <title>Cyberpunk 2077</title>
@@ -7,13 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/nav.css">
     <link rel="shortcut icon" href="img/logo/favicon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
 </head>
 
-<body class="body">
+<body class="body" onload="slider(); switchSlide()">
     <header>
         <div class="headerContainer">
             <div class="headerAwards">
@@ -204,60 +205,76 @@
                 </div>
             </div>
             <div class="sectionGalerySlides">
-                <div class="sliderBox1" id="sliderBox1">
-                    <div class="sb1Container1">
-                        <div class="sbMBox"></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div class="sb1Container2">
-                        <div class="sbMBox"></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div class="sb1Container3">
-                        <div class="sbMBox"></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </div>
-                <div class="sliderBox2 hidden" id="sliderBox2">
-                    <div class="sb2Container1">
-                        <div class="sbMBox"></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div class="sb2Container2">
-                        <div class="sbMBox"></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div class="sb2Container3">
-                        <div class="sbMBox"></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
+                <div id="sgsBox1">
+                    <div class="sliderBox1 swiper-container" id="sliderBox1">
+                        <div class="swiper-wrapper">
+                            <div class="sb1Container1 swiper-slide">
+                                <div class="sbMBox"></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="sb1Container2 swiper-slide">
+                                <div class="sbMBox"></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="sb1Container3 swiper-slide">
+                                <div class="sbMBox"></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div class="buttonPrev"></div>
+                        <div class="buttonNext"></div>
                     </div>
                 </div>
-                <div class="sliderBox3 hidden" id="sliderBox3">
-                    <div class="sb3Container1">
-                        <div class="sbMBox"></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
+                <div id="sgsBox2">
+                    <div class="sliderBox2 swiper-container" id="sliderBox2">
+                        <div class="swiper-wrapper">
+                            <div class="sb2Container1 swiper-slide">
+                                <div class="sbMBox"></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="sb2Container2 swiper-slide">
+                                <div class="sbMBox"></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="sb2Container3 swiper-slide">
+                                <div class="sbMBox"></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div class="buttonPrev"></div>
+                        <div class="buttonNext"></div>
                     </div>
+                </div>
+                <div id="sgsBox3">
+                    <div class="sliderBox3" id="sliderBox3">
+                        <div class="sb3Container1">
+                            <div class="sbMBox"></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="buttonPrev"></div>
+                    <div class="buttonNext"></div>
                 </div>
             </div>
         </div>
@@ -400,7 +417,7 @@
         </section>
     </footer>
 
-
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

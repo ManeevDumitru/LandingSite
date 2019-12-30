@@ -590,6 +590,32 @@ h2 {
     grid-area: 2/1/2/-1;
 }
 
+.swiper-container {
+    height: 400px;
+    overflow: visible;
+}
+
+.buttonPrev, .buttonNext {
+    background: url(../img/utility/Arrows.png);
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 3;
+    cursor: pointer;
+}
+
+.buttonPrev {
+    background-position-x: left;
+    left: 0;
+}
+
+.buttonNext {
+    background-position-x: right;
+    right: 0;
+}
+
 .sb1Container1, .sb1Container2, .sb1Container3, .sb2Container1, .sb2Container2, .sb2Container3, .sb3Container1 {
     height: 400px;
     display: grid;
