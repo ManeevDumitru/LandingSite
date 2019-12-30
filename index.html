@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
 </head>
 
-<body class="body" onload="slider(); switchSlide()">
+<body class="body" onload="slider(); switchSlide(); checkInputs()" onclick="checkInputs()">
     <header>
         <div class="headerContainer">
             <div class="headerAwards">
@@ -142,10 +142,10 @@
                         <div class="inputBox">
                             <label id="move" class="moveable position">Introduce your e-mail</label>
                             <input type="email" name="email" id="inputEmail" required onkeyup="moveLabel()"
-                                onkeypress="moveLabel()">
+                                onkeypress="moveLabel(); checkInputs()">
                         </div>
                         <div class="checkboxBox">
-                            <input type="checkbox" name="inputCheckbox" id="inputCheckbox">
+                            <input type="checkbox" name="inputCheckbox" id="inputCheckbox" onclick="checkInputs()">
                             <p>
                                 I want to get news, special offers and other information about CD PROJEKT and I confirm
                                 that
@@ -175,8 +175,8 @@
             <div class="sectionGaleryCategory">
                 <div class="categoryList">
                     <div class="categoriesContainer">
-                        <button id="r23" onclick="switchSlide()" autofocus>
-                            <span>
+                        <button id="r23" onclick="switchSlide()">
+                            <span id="r23s">
                                 Screenshots
                             </span>
                             <span>
@@ -185,7 +185,7 @@
                             <i></i>
                         </button>
                         <button id="r24" onclick="switchSlide()">
-                            <span>
+                            <span id="r24s">
                                 Wallpaper
                             </span>
                             <span>
@@ -193,7 +193,7 @@
                             </span>
                         </button>
                         <button id="r25" onclick="switchSlide()">
-                            <span>
+                            <span id="r25s">
                                 Concepts
                             </span>
                             <span>

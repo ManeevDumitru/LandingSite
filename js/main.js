@@ -46,6 +46,25 @@ function moveLabel() {
     }
 }
 
+function checkInputs() {
+    let input = document.getElementById('inputEmail').value.length;
+    let checkbox = document.getElementById('inputCheckbox');
+    let button = document.getElementById('buttonSubmit');
+    if (checkbox.checked && (input > 0)) {
+        console.log('works');
+        button.style.cursor = "pointer";
+        button.style.color = " black";
+        button.style.background = "url(../img/utility/Outline2B.png)";
+        button.disabled = false;
+    } else {
+        button.disabled = true;
+        button.style.cursor = "";
+        button.style.color = "";
+        button.style.background = "url(../img/utility/Outline2.png)";
+        console.log('does not')
+    }
+}
+
 function switchSlide() {
     let box1 = document.getElementById('sgsBox1');
     let box2 = document.getElementById('sgsBox2');
@@ -54,22 +73,32 @@ function switchSlide() {
     let button2 = document.getElementById('r24');
     let button3 = document.getElementById('r25');
     box1.style.display = "block";
-        box2.style.display = "none";
-        box3.style.display = "none";
+    box2.style.display = "none";
+    box3.style.display = "none";
+    button1.classList.add('activeB');
     button1.addEventListener("click", function () {
         box1.style.display = "block";
         box2.style.display = "none";
         box3.style.display = "none";
+        button1.classList.add('activeB');
+        button2.classList.remove('activeB');
+        button3.classList.remove('activeB');
     });
     button2.addEventListener("click", function () {
         box1.style.display = "none";
         box2.style.display = "block";
         box3.style.display = "none";
+        button1.classList.remove('activeB');
+        button2.classList.add('activeB');
+        button3.classList.remove('activeB');
     });
     button3.addEventListener("click", function () {
         box1.style.display = "none";
         box2.style.display = "none";
         box3.style.display = "block";
+        button1.classList.remove('activeB');
+        button2.classList.remove('activeB');
+        button3.classList.add('activeB');
     })
 }
 
