@@ -36,11 +36,10 @@ audio {
 }
 
 ::-webkit-scrollbar {
-    width: 2px;
+    width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: none;
     border-radius: 5px;
 }
 
@@ -85,16 +84,17 @@ header::after {
     top: 0;
     z-index: 1;
     padding: 35px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 190px
 }
 
 .headerRightFieldLinks {
-    /*line-height: 100px;*/
     padding: 35px;
     font-size: 26px;
 }
 
-.headerRightFieldLinks a {
+.headerRightFieldLinks li {
+    display: inline-block;
     padding: 0 5px 0 5px;
 }
 
@@ -133,14 +133,14 @@ header::after {
     bottom: 250px;
     left: 55%;
     z-index: 1;
+    display: grid;
+    grid-template-rows: 50px 1fr 50px
 }
 
 .headerUnderVideoDate {
     font-size: 36px;
     text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 20px;
+    text-align: center;
 }
 
 #releaseDate {
@@ -160,6 +160,11 @@ header::after {
     font-size: 32px;
 }
 
+.headerUnderVideoButton span {
+    position: relative;
+    z-index: 2;
+}
+
 .headerUnderVideoButton::after {
     content: " ";
     background: url(../img/utility/AngleButton.png);
@@ -170,7 +175,7 @@ header::after {
     left: 0;
 }
 
-.headerUnderVideoPlatforms ul {
+.headerUnderVideoPlatforms {
     padding-top: 25px;
     display: flex;
     flex-direction: row;
@@ -179,8 +184,9 @@ header::after {
     font-weight: 600;
 }
 
-.headerUnderVideoPlatforms ul li {
+.headerUnderVideoPlatforms li {
     padding: 0 10px;
+    display: inline-block;
 }
 
 .active {
@@ -252,6 +258,8 @@ header::after {
     top: 50%;
     transform: translate(0, -50%);
     padding: 55px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
 
 .fieldForLabel {
@@ -287,7 +295,6 @@ header::after {
 }
 
 .features {
-    height: 400px;
     background: #000;
     max-width: 1400px;
     margin: auto;
@@ -295,14 +302,19 @@ header::after {
 
 .featuresWrapper {
     margin-top: 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .featureBox {
     height: 250px;
 }
+
+/*.featureBoxWrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: ;
+}*/
 
 .featureBoxWrapper p {
     font-family: BlenderProBook, sans-serif;
@@ -311,20 +323,32 @@ header::after {
     font-size: 16px;
     display: inline-block;
     margin-top: 20px;
-    max-width: 400px;
 }
+
+/* Does not work otherwise */
 
 .featureBoxWrapper:first-child .featureBox {
     background: url(../img/bg/Moto.png);
+    background-position: left;
+    background-size: initial;
+    background-repeat: no-repeat;
 }
 
 .featureBoxWrapper:nth-child(2) .featureBox {
     background: url(../img/bg/City.png);
+    background-position: left;
+    background-size: initial;
+    background-repeat: no-repeat;
 }
 
 .featureBoxWrapper:last-child .featureBox {
     background: url(../img/bg/KeanuReeves.png);
+    background-position: left;
+    background-size: initial;
+    background-repeat: no-repeat;
 }
+
+/* Does not work otherwise */
 
 .featureBoxText {
     background: yellow;
@@ -383,7 +407,7 @@ header::after {
     grid-template-columns: 2fr 3fr 1fr;
     max-width: 1400px;
     margin: auto;
-    padding: 75px 0 100px 0 !important;
+    padding: 50px 0 100px 0 !important;
 }
 
 .fieldLeftContainer {
@@ -424,6 +448,11 @@ header::after {
 .checkboxBox {
     display: grid;
     grid-template-columns: 1fr 20fr;
+}
+
+.checkboxBox p {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
 
 input#checkbox {
@@ -828,6 +857,21 @@ button.activeB span:nth-child(1) {
     background: #02d7f2;
     box-sizing: border-box;
     padding: 0 30px 30px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    text-align: left
+}
+
+.snMainBox::before {
+    content: " ";
+    position: absolute;
+    height: 0;
+    width: 0;
+    left: 0;
+    top: 0;
+    border-color: #000000 transparent;
+    border-style: solid;
+    border-width: 19px 19px 0 0;
 }
 
 .snMainBox:hover {
@@ -835,7 +879,8 @@ button.activeB span:nth-child(1) {
 }
 
 .snMainBoxT {
-    padding-top: 100px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
 
 .snMainBoxT::after {
@@ -871,9 +916,9 @@ button.activeB span:nth-child(1) {
 
 .snMainBoxB {
     position: absolute;
-    bottom: 30px;
-    padding-left: 30px;
-    width: 275px;
+    bottom: 50px;
+    padding-left: 55px;
+    width: 300px;
     font-size: 20px;
 }
 
@@ -893,8 +938,10 @@ button.activeB span:nth-child(1) {
     color: #000;
 }
 
-.snSecBoxT h3 {
-    padding-top: 100px;
+.snSecBoxT {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 75px 1fr;
 }
 
 .snSecBoxT::after {

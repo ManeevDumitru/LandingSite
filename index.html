@@ -5,13 +5,15 @@
     <title>Cyberpunk 2077</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/nav.css">
-    <link rel="shortcut icon" href="img/logo/favicon.ico">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
+    <link rel="stylesheet" href="media/media.css">
+    <link rel="shortcut icon" href="img/logo/favicon.ico">
+    
 </head>
 
 <body class="body" onload="slider(); switchSlide(); checkInputs()" onclick="checkInputs()">
@@ -21,14 +23,26 @@
                 <img src="img/logo/Awards.png" alt="Awards Missing">
             </div>
             <div class="headerRightField">
-                <div class="headerRightFieldLinks">
-                    <a href="https://www.youtube.com/user/CyberPunkGame"><i class="fab fa-youtube"></i></a>
-                    <a href="https://vk.com/cyberpunkgame"><i class="fab fa-vk"></i></a>
-                    <a href="https://www.facebook.com/CyberpunkGameRU"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://twitter.com/cyberpunkgame"><i class="fab fa-twitter"></i></a>
-                    <a href="https://discordapp.com/invite/cyberpunkgame"><i class="fab fa-discord"></i></a>
-                    <a href="https://www.instagram.com/cyberpunkgame/"><i class="fab fa-instagram"></i></a>
-                </div>
+                <ul class="headerRightFieldLinks">
+                    <li>
+                        <a href="https://www.youtube.com/user/CyberPunkGame"><i class="fab fa-youtube"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://vk.com/cyberpunkgame"><i class="fab fa-vk"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/CyberpunkGameRU"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/cyberpunkgame"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://discordapp.com/invite/cyberpunkgame"><i class="fab fa-discord"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/cyberpunkgame/"><i class="fab fa-instagram"></i></a>
+                    </li>
+                </ul>
                 <div class="headerRightFieldStudio">
                     <a href="https://en.cdprojektred.com/"><img src="img/logo/CDPRlogoc.png" alt=""></a>
                 </div>
@@ -47,11 +61,10 @@
                 </div>
                 <a href="https://www.cyberpunk.net/gb/ru/pre-order">
                     <div class="headerUnderVideoButton">
-                        Preorder now_
+                        <span>Preorder now_</span>
                     </div>
                 </a>
-                <div class="headerUnderVideoPlatforms">
-                    <ul>
+                <ul class="headerUnderVideoPlatforms">
                         <li>
                             <i class="fab fa-xbox"></i> XBox
                         </li>
@@ -64,8 +77,7 @@
                         <li>
                             <i class="fab fa-google-wallet"></i> Stadia
                         </li>
-                    </ul>
-                </div>
+                </ul>
             </section>
         </div>
     </header>
@@ -289,15 +301,21 @@
                     <a href="">
                         <div class="snMainBox">
                             <div class="snMainBoxT">
-                                <span id="snMDate">19.11.2019</span>
-                                <span id="replaceMDate">More</span>
-                                <h3>
-                                    Welcome the finalists of the "Cyberpunk 2077" cosplay contest!
-                                </h3>
+                                <div class="rowTop">
+                                    <span id="snMDate">19.11.2019</span>
+                                    <span id="replaceMDate">More</span>
+                                </div>
+                                <div class="rowBottom">
+                                    <h3>
+                                        Welcome the finalists of the "Cyberpunk 2077" cosplay contest!
+                                    </h3>
+                                </div>
+
                             </div>
                             <div class="snMainBoxB">
                                 The best cosplay costumes we're chosen and we present you the results!
                             </div>
+                            <i></i>
                         </div>
                     </a>
                 </li>
@@ -305,8 +323,10 @@
                     <a href="">
                         <div class="snSecBox">
                             <div class="snSecBoxT">
-                                <span id="snSDate">16.02.2019</span>
-                                <span id="replaceSDate">More</span>
+                                <div class="snRowT">
+                                    <span id="replaceSDate">More</span>
+                                    <span id="snSDate">16.02.2019</span>
+                                </div>
                                 <h3>
                                     How does NightCity sound?
                                 </h3>
@@ -318,8 +338,10 @@
                     <a href="">
                         <div class="snSecBox">
                             <div class="snSecBoxT">
-                                <span id="snSDate">16.02.2019</span>
-                                <span id="replaceSDate">More</span>
+                                <div class="snRowT">
+                                    <span id="snSDate">16.02.2019</span>
+                                    <span id="replaceSDate">More</span>
+                                </div>
                                 <h3>
                                     Official photo contest Cyberpunk 2077
                                 </h3>
@@ -331,8 +353,10 @@
                     <a href="">
                         <div class="snSecBox">
                             <div class="snSecBoxT">
-                                <span id="snSDate">16.02.2019</span>
-                                <span id="replaceSDate">More</span>
+                                <div class="snRowT">
+                                    <span id="snSDate">16.02.2019</span>
+                                    <span id="replaceSDate">More</span>
+                                </div>
                                 <h3>
                                     Cyberpunk 2077 on IgroMir 2019
                                 </h3>
@@ -344,8 +368,10 @@
                     <a href="">
                         <div class="snSecBox">
                             <div class="snSecBoxT">
-                                <span id="snSDate">16.02.2019</span>
-                                <span id="replaceSDate">More</span>
+                                <div class="snRowT">
+                                    <span id="snSDate">16.02.2019</span>
+                                    <span id="replaceSDate">More</span>
+                                </div>
                                 <h3>
                                     <span>Creating the CG trailer of Cyberpunk 2077</span>
                                 </h3>
