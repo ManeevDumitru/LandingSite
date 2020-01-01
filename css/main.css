@@ -8,11 +8,15 @@
 }
 
 body {
-    font-family: 'Odibee Sans', cursive;
-    letter-spacing: 1px;
+    letter-spacing: .2px;
     font-size: 26px;
     width: 100%;
     background: black;
+    font-family: "Blender Pro";
+}
+
+section {
+    overflow: hidden;
 }
 
 ul {
@@ -53,6 +57,7 @@ header {
     background: #efe600;
     height: 955px;
     position: relative;
+    overflow: hidden;
 }
 
 header::after {
@@ -63,6 +68,7 @@ header::after {
     position: absolute;
     bottom: -1px;
     left: 0;
+    z-index: 2;
 }
 
 .headerContainer {
@@ -216,13 +222,63 @@ header::after {
 
 .spaceBetweenFirst {
     background: black;
+    color: #00ffff;
     height: 250px;
+    max-width: 1920px;
+    margin: auto;
+}
+
+.swiper-container2 {
+    width: 100%;
+    height: 250px;
+}
+
+.reviewContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #000;
+    width: 500px;
+    text-align: center;
+}
+
+.rcT::after {
+    content: " ";
+    background: #00ffff;
+    height: 2px;
+    width: 150px;
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translate(-50%);
+}
+
+.rcB {
+    padding-top: 10px;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.sbsR {
+    text-align: center;
+    line-height: 250px;
+}
+
+.sbsR::after {
+    content: " ";
+    background: #00ffff;
+    width: 175px;
+    height: 3px;
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, 50%);
 }
 
 .introduction {
     background: url(../img/bg/CP77Intr.png);
-    background-position: center;
-    background-size: cover;
+    background-position: top;
     height: 750px;
     max-width: 1920px;
     margin: auto;
@@ -251,37 +307,14 @@ header::after {
 
 .boxForIntroduction {
     background: #fcee0a;
-    height: 275px;
     width: 500px;
     position: absolute;
     right: 0;
     top: 50%;
     transform: translate(0, -50%);
-    padding: 55px;
+    padding: 25px 55px 25px;
     display: grid;
-    grid-template-rows: 1fr 1fr;
-}
-
-.fieldForLabel {
-    text-transform: uppercase;
-    font-size: 36px;
-    margin-bottom: 30px;
-}
-
-.fieldForLabel::after {
-    content: " ";
-    background: url(../img/utility/bar4.png);
-    width: 100%;
-    height: 10px;
-    position: absolute;
-    bottom: -15px;
-    left: 0;
-}
-
-.fieldForText {
-    font-weight: 200;
-    font-size: 16px;
-    font-family: BlenderProBook, sans-serif;
+    grid-template-rows: 100px 1fr;
 }
 
 .boxForIntroduction::after {
@@ -292,6 +325,42 @@ header::after {
     position: absolute;
     bottom: -29px;
     left: 0;
+}
+
+.fieldForLabel {
+    text-transform: uppercase;
+    font-size: 36px;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+.fieldForLabel::after {
+    content: " ";
+    background: url(../img/utility/bar4.png);
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.fieldForText {
+    font-weight: 400;
+    font-size: 16px;
+    font-family: "Arial", monospace, sans-serif;
+    line-height: 1.5;
+}
+
+#introductionP2 {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    z-index: 2;
+    font-size: 14px;
+    padding: 0 10.66667vw 0;
+    display: none;
+    font-family: "Arial", monospace, sans-serif;
+    line-height: 1.5;
 }
 
 .features {
@@ -310,14 +379,7 @@ header::after {
     height: 250px;
 }
 
-/*.featureBoxWrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: ;
-}*/
-
 .featureBoxWrapper p {
-    font-family: BlenderProBook, sans-serif;
     color: #fff;
     font-weight: 200;
     font-size: 16px;
@@ -355,7 +417,7 @@ header::after {
     width: 300px;
     position: absolute;
     bottom: 25px;
-    right: -50px;
+    right: 0;
     padding: 15px;
     text-transform: uppercase;
 }
@@ -407,7 +469,7 @@ header::after {
     grid-template-columns: 2fr 3fr 1fr;
     max-width: 1400px;
     margin: auto;
-    padding: 50px 0 100px 0 !important;
+    padding: 50px 0 50px 0 !important;
 }
 
 .fieldLeftContainer {
@@ -540,25 +602,19 @@ h2 {
     position: relative;
 }
 
-.categoryList {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-    grid-gap: 0;
+.sectionGaleryCategory {
+    padding: 50px 0;
 }
 
 .categoriesContainer {
-    position: absolute;
-    margin-top: 50px;
-    transform: translate(-20%);
-    width: 606px;
+    margin: auto;
+    width: 600px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
 }
 
-.categoryList button {
+.categoriesContainer button {
     position: relative;
     font-weight: 700;
     line-height: normal;
@@ -576,9 +632,9 @@ h2 {
 .categoriesContainer button:first-child i {
     background: #000;
     position: absolute;
-    left: -22px;
-    bottom: -21px;
-    height: 34px;
+    left: -18px;
+    bottom: -9px;
+    height: 20px;
     width: 30px;
     z-index: 3;
     transform: rotate(-135deg);
@@ -592,8 +648,7 @@ h2 {
     height: 24px;
     border-bottom: 2px solid #cdcdcd;
     background-color: #000;
-    -webkit-transform: rotate(-135deg);
-    transform: rotate(-135deg);
+    transform: rotate(-139deg);
 }
 
 .categoriesContainer button:last-child i {
@@ -628,7 +683,7 @@ button.activeB span:nth-child(1) {
     color: black;
 }
 
-.categoryList span {
+.categoriesContainer span {
     font-size: 16px;
     color: #cdcdcd;
     font-weight: 600;
@@ -650,7 +705,6 @@ button.activeB span:nth-child(1) {
 
 .swiper-container {
     height: 400px;
-    overflow: visible;
 }
 
 .buttonPrev, .buttonNext {
@@ -709,7 +763,25 @@ button.activeB span:nth-child(1) {
     background: url(../img/bg/CP77ec.png);
 }
 
-/* ------------------------ BOX 1 CONTAINER 2  ------------------------*/
+/* ------------------------ BOX 1m CONTAINER ------------------------ */
+
+#sgsBox1m {
+    display: none;
+}
+
+#r23:not(.activeB) #sgsBox1m {
+    display: none;
+}
+
+.sliderBox1m {
+    height: 44vw;
+}
+
+.sliderBox1m .swiper-wrapper .swiper-slide img {
+    width: 100%;
+}
+
+/* ------------------------ BOX 1 CONTAINER 2 ------------------------*/
 
 .sliderBox1 .sb1Container2 .sbMBox {
     background: url(../img/bg/CP77fm.png);
@@ -777,6 +849,10 @@ button.activeB span:nth-child(1) {
 
 /* ------------------------ BOX 2 CONTAINER 2 ------------------- */
 
+#sgsBox2m {
+    display: none !important;
+}
+
 .sliderBox2 .sb2Container2 .sbMBox {
     background: url(../img/bg/CP77zm.png);
 }
@@ -817,6 +893,12 @@ button.activeB span:nth-child(1) {
 
 .sliderBox2 .sb2Container3 div:nth-child(5) {
     background: url(../img/bg/CP77zic.png);
+}
+
+/* ------------------------ BOX 2m CONTAINER ------------------------ */
+
+.sliderBox2m .swiper-wrapper .swiper-slide:nth-child(2) {
+    background: url(../img/bg/CP77tcm.png);
 }
 
 /* ------------------------ BOX 3 CONTAINER 1 ------------------------ */
@@ -1020,6 +1102,10 @@ footer::before {
     left: 0;
 }
 
+#WTFm {
+    display: none;
+}
+
 .fContentTop {
     display: grid;
     grid-template-rows: 1fr 100px;
@@ -1104,4 +1190,7 @@ footer::before {
 .fContentBBox4Img {
     max-width: 60%;
     margin: auto;
+}
+#secondUl li:last-child {
+    display: none;
 }

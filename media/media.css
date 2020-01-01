@@ -21,6 +21,9 @@
     .headerRightField .headerRightFieldStudio {
         grid-area: 1/2/1/2;
     }
+    .headerRightField {
+        padding: 15px;
+    }
     .headerUnderVideo {
         position: absolute;
         left: 50%;
@@ -49,9 +52,63 @@
         height: 65px;
         z-index: 1;
     }
+    .sectionGaleryContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 75px 100px 1fr;
+    }
+    .sectionGaleryName {
+        grid-area: 1/1/1/3;
+        margin-top: 0;
+    }
+    .sectionGaleryName h2::after {
+        position: absolute;
+        left: 50%;
+        transform: translate(-70%);
+    }
+    .sectionGaleryCategory {
+        grid-area: 2/1/2/3;
+        padding: 25px 0;
+    }
+    .categoriesContainer {
+        margin: 0 auto;
+    }
+    .sectionGalerySlides {
+        grid-area: 3/1/3/3 !important;
+    }
 }
 
 @media screen and (max-width: 1000px) {
+    .introduction::before {
+        background: url(../img/utility/bar2invc.png);
+    }
+    .introduction {
+        height: 800px;
+        background-size: 100%;
+        background-position: top;
+        background-repeat: no-repeat;
+        background: url(../img/bg/CP77zoc.png);
+    }
+    .fieldForLabel {
+        font-size: 32px;
+    }
+    .boxForIntroduction {
+        display: block;
+        width: 60%;
+        padding: 25px 25px;
+        position: absolute;
+        right: 0;
+        top: 30%;
+    }
+    .fieldForLabel::after {
+        bottom: -5px;
+    }
+    .fieldForText {
+        display: none;
+    }
+    #introductionP2 {
+        display: block;
+    }
     .features {
         padding-bottom: 75px;
     }
@@ -62,16 +119,16 @@
         justify-content: center;
     }
     .featureBoxWrapper {
-        margin: 50px auto;
+        margin: 50px auto 0;
     }
-    .featuresWrapper .featureBoxWrapper:first-child .featureBox{
+    .featuresWrapper .featureBoxWrapper:first-child .featureBox {
         background: url(../img/bg/CP77zjc.png);
     }
-    .featuresWrapper .featureBoxWrapper:nth-child(2) .featureBox{
+    .featuresWrapper .featureBoxWrapper:nth-child(2) .featureBox {
         background: url(../img/bg/CP77zkc.png);
     }
-    .featuresWrapper .featureBoxWrapper:last-child .featureBox{
-        background: url(../img/bg/CP77znc.png);
+    .featuresWrapper .featureBoxWrapper:last-child .featureBox {
+        background: url(../img/bg/CP77zfc.png);
     }
     .featureBox {
         height: 500px;
@@ -85,13 +142,13 @@
         width: 60%;
     }
     .featureBoxWrapper p {
-        font-size: 30px;
+        font-size: 22px;
         max-width: 600px;
     }
     .sectionSpam, .sectionSpamContainer::after {
         display: none;
     }
-    .sectionNewsTitle h2{
+    .sectionNewsTitle h2 {
         text-align: center;
     }
     .sectionNewsTitle h2::after {
@@ -104,8 +161,120 @@
         grid-template-columns: 1fr;
         grid-template-rows: repeat(5, 1fr);
     }
+    #firstUl {
+        grid-template-columns: 1fr;
+        font-size: 30px !important;
+    }
+    #firstUl li:first-child {
+        grid-area: 1/1/1/-1;
+        line-height: 75px;
+        width: 100%;
+    }
+    #firstUl li:nth-child(2) {
+        grid-area: 2/1/2/-1;
+        line-height: 75px;
+    }
+    #firstUl li:nth-child(3) {
+        grid-area: 3/1/3/-1;
+    }
+    #WTFm {
+        display: block;
+        line-height: 75px;
+    }
+    #WTFM {
+        display: none;
+    }
+    #secondUl {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #secondUl li {
+        line-height: 75px;
+    }
+    #secondUl li:first-child {
+        grid-area: 1/1/1/1;
+    }
+    #secondUl li:nth-child(2) {
+        grid-area: 1/2/1/2;
+    }
+    #secondUl li:nth-child(3) {
+        grid-area: 1/3/1/3;
+    }
+    #secondUl li:last-child {
+        grid-area: 3/2/3/2;
+    }
+    #secondUl li:last-child i {
+        width: 54px;
+    }
 }
+
+@media screen and (max-width: 900px) {
+    .sectionGaleryContainer {
+        display: grid;
+        grid-template-rows: 100px 1fr;
+    }
+    #sgsBox1, #sgsBox2, #sgsBox3 {
+        display: none !important;
+    }
+    .sectionGaleryCategory {
+        display: none;
+    }
+    #sgsBox1m {
+        display: block;
+    }
+    #secondUl li:last-child {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    header, .headerUnderContainer {
+        overflow: hidden;
+        height: 120vw;
+    }
+    .headerContainer {
+        margin: auto;
+        max-width: 1920px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+    }
+    .headerAwards {
+        padding: 15px;
+    }
+    .headerAwards img {
+        height: 26px;
+    }
+    .headerRightField {
+        width: 100px;
+        padding: 15px;
+    }
+    .headerRightFieldStudio img {
+        height: 37px;
+    }
+    .headerCP77Wrapper {
+        background: url(../img/bg/CPMobc.jpg);
+        background-size: 100% auto;
+        background-position: top;
+        height: 120vw;
+    }
+    .headerUnderVideo {
+        position: absolute;
+        bottom: 25%;
+    }
+}
+
 @media screen and (max-width: 700px) {
+    .featuresWrapper .featureBoxWrapper:first-child .featureBox {
+        background: url(../img/bg/CP77zjcc.png);
+    }
+    .featuresWrapper .featureBoxWrapper:nth-child(2) .featureBox {
+        background: url(../img/bg/CP77zkcc.png);
+    }
+    .featuresWrapper .featureBoxWrapper:last-child .featureBox {
+        background: url(../img/bg/CP77zfcc.png);
+    }
     .featureBox {
         width: 400px;
         height: 200px;
@@ -118,8 +287,58 @@
         max-width: 400px;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .categoriesContainer {
+        width: 100%;
+    }
+    .fContentB ul {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 0;
+    }
+    .fContentB ul li {
+        text-align: center;
+    }
+    .fContentB ul li a {
+        font-size: 21px;
+        color: #fcee0a
+    }
+    .fContentB ul li:first-child {
+        grid-area: 1/1/1/-1;
+    }
+    .fContentB ul li:last-child {
+        grid-area: 2/1/2/-1;
+    }
+    .fContentB ul img {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .featureBoxText {
         right: 0;
+    }
+    #sgsBox1m {
+        width: 100%;
+    }
+    .swiper-container2 {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 400px) {
+    html {
+        margin: auto;
+    }
+    .featureBox {
+        width: 100%;
+    }
+    .sectionNewsBox {
+        padding: 0;
+    }
+    .fContentTop #firstUl a, #WTFm {
+        font-size: 24px
     }
 }

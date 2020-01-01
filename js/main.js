@@ -115,3 +115,16 @@ function slider() {
         },
     })
 }
+function slider2() {
+    let mySwiper2 = new Swiper('.swiper-container2', {
+        direction: 'horizontal', // direction
+        loop: true, // infinite scrolling
+        speed: 500,
+        allowTouchMove: false,
+        effect: 'fade',
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+    })
+}
