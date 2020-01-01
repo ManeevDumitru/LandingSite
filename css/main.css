@@ -337,7 +337,7 @@ header::after {
 .fieldForLabel::after {
     content: " ";
     background: url(../img/utility/bar4.png);
-    width: 100%;
+    width: 500px;
     height: 10px;
     position: absolute;
     bottom: 0;
