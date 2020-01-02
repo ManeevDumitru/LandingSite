@@ -1015,7 +1015,7 @@ button.activeB span:nth-child(1) {
     display: none;
 }
 
-#replaceMDate, #replaceSDate {
+#replaceMDate, .replaceSDate {
     position: absolute;
     right: 0;
     top: 20px;
@@ -1069,18 +1069,18 @@ button.activeB span:nth-child(1) {
     background: #000;
 }
 
-#snSDate {
+.snSDate {
     position: absolute;
     right: 0;
     top: 25px;
     font-size: 18px;
 }
 
-.snSecBox:hover #snSDate {
+.snSecBox:hover .snSDate {
     display: none;
 }
 
-.snSecBox:hover #replaceSDate {
+.snSecBox:hover .replaceSDate {
     display: block;
 }
 

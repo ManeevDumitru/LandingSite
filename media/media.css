@@ -212,7 +212,7 @@
 @media screen and (max-width: 900px) {
     .sectionGaleryContainer {
         display: grid;
-        grid-template-rows: 100px 1fr;
+        grid-template-rows: 130px 1fr;
     }
     #sgsBox1, #sgsBox2, #sgsBox3 {
         display: none !important;
